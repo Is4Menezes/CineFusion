@@ -1,0 +1,89 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="CineFusion" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e05b0895-df41-4427-b70e-91876293edfd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<query language="SQL"><![CDATA[SELECT nome,
+	localizacao,
+	email,
+	id,
+	cnpj,
+	senha
+FROM cinefusion.cinema]]></query>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cinema"/>
+	</field>
+	<field name="localizacao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="localizacao"/>
+		<property name="com.jaspersoft.studio.field.label" value="localizacao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cinema"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cinema"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cinema"/>
+	</field>
+	<field name="cnpj" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cnpj"/>
+		<property name="com.jaspersoft.studio.field.label" value="cnpj"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cinema"/>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="senha"/>
+		<property name="com.jaspersoft.studio.field.label" value="senha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cinema"/>
+	</field>
+	<background splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="6453966a-dc0c-4655-b40a-ae315eabc30b" x="-20" y="4" width="595" height="30" fontSize="20.0" hTextAlign="Center" vTextAlign="Justified">
+			<text><![CDATA[Lista de Cinemas]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="d08464db-060e-4473-a321-d715ffe9a565" x="50" y="0" width="200" height="30">
+			<text><![CDATA[Nome]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7e75a2d-da6a-413a-abdf-80a907512cac"/>
+		</element>
+		<element kind="staticText" uuid="0105a6b1-5b76-4c79-b4b7-fd7a52a7994d" x="250" y="0" width="160" height="30">
+			<text><![CDATA[Localizacao]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25d159f-6c73-4eec-b500-004201d2a313"/>
+		</element>
+		<element kind="staticText" uuid="15fb0d84-72b7-463e-9418-506f7ba51e6c" x="410" y="0" width="150" height="30">
+			<text><![CDATA[E-mail]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f9b4c07-a822-48c7-ae0f-3b6fd1c89cf5"/>
+		</element>
+		<element kind="staticText" uuid="524f54fd-c388-432e-bac9-6f0a3d768377" x="0" y="0" width="50" height="30">
+			<text><![CDATA[Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df8de2e5-f842-418b-8bd5-e4e43a6613b6"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="b1f6ef90-befb-4078-92eb-cb116ab610de" x="50" y="1" width="200" height="30">
+				<expression><![CDATA[$F{nome}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7e75a2d-da6a-413a-abdf-80a907512cac"/>
+			</element>
+			<element kind="textField" uuid="65e97361-5712-4b26-98f4-4e2b90eee720" x="250" y="1" width="160" height="30">
+				<expression><![CDATA[$F{localizacao}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a25d159f-6c73-4eec-b500-004201d2a313"/>
+			</element>
+			<element kind="textField" uuid="4e7ad5e6-914f-46e0-9134-109f7f182362" x="410" y="1" width="150" height="30">
+				<expression><![CDATA[$F{email}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f9b4c07-a822-48c7-ae0f-3b6fd1c89cf5"/>
+			</element>
+			<element kind="textField" uuid="d06b89fe-96e3-49de-84d6-324c704ca54c" x="0" y="1" width="50" height="30">
+				<expression><![CDATA[$F{id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df8de2e5-f842-418b-8bd5-e4e43a6613b6"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
