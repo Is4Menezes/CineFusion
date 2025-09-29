@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div id="box">
+    <div id="header">
+      <h1>Cliente</h1>
+      <img src="assets/ticketCine2.png" alt="Cinema Ticket">
+    </div>
+
+    <form [formGroup]="formGroup" (ngSubmit)="salvar()">
+      <ion-item class="form-control">
+        <ion-label position="stacked" class="custom-label">Insira o seu nome</ion-label>
+        <ion-input type="text" formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item class="form-control">
+        <ion-label position="stacked" class="custom-label">Insira o seu e-mail</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+
+        <div class="erro-validacao" *ngIf="emailInvalido">
+          O e-mail informado já existe.
+        </div>
+      </ion-item>
+      <ion-item class="form-control">
+        <ion-label position="stacked" class="custom-label">Insira o seu CPF</ion-label>
+        <ion-input type="text" formControlName="cpf"></ion-input>
+
+        <div class="erro-validacao" *ngIf="cpfInvalido">
+          O CPF informado já existe.
+        </div>
+      </ion-item>
+      <ion-item class="form-control">
+        <ion-label position="stacked" class="custom-label">Insira sua data de nascimento</ion-label>
+        <ion-input type="date" formControlName="dataNascimento"></ion-input>
+      </ion-item>
+      <ion-item class="form-control">
+        <ion-label position="stacked" class="custom-label">Insira uma senha</ion-label>
+        <ion-input type="password" formControlName="senha"></ion-input>
+      </ion-item>
+
+      <div id="buttons">
+        <ion-button type="submit" expand="block" color="primary" [disabled]="!formGroup.valid" class="botao"
+          id="salvar">Salvar</ion-button>
+      </div>
+
+      <p id="link">Já tem uma conta? <a [routerLink]="['/login-cliente']">Log in</a></p>
+    </form>
+  </div>
+
+</ion-content>

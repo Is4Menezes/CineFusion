@@ -1,0 +1,83 @@
+ion-content {
+    --background: url('/assets/pipocaCine.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #box {
+    background: rgba(50, 50, 50, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #header img {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    width: 50px;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .form-control {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  #buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  
+  .botao {
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 60%;
+    background-color: #4682B4;
+    color: white;
+  }
+  
+  .botao:hover {
+    opacity: 0.9;
+  }
+  
+  #link {
+    margin-top: 30px;
+    color: white;
+  }
+  
+  #link a {
+    color: #add8e6;
+    text-decoration: underline;
+  }
+  
